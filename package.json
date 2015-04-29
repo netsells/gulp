@@ -1,0 +1,26 @@
+{
+  "name": "netsells-gulp",
+  "version": "1.0.0",
+  "description": "Netsells custom gulp file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netsells/gulp.git"
+  },
+  "keywords": [
+    "netsells",
+    "gulp"
+  ],
+  "author": "Sam Turrell <sam@samturrell.co.uk> (http://samturrell.co.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netsells/gulp/issues"
+  },
+  "homepage": "https://github.com/netsells/gulp#readme",
+  "dependencies": {
+    "gulp": "^3.8.8"
+  }
+}
