@@ -5,8 +5,10 @@ var gulp        = require('gulp'),
     vinylPaths  = require('vinyl-paths'),
     path        = require('gulp-paths');
 
-module.exports = function(config, component) {
-    console.log(component);
+module.exports = function(data) {
+    c = data.config;
+    component = data.component;
+
     /**
     Run the task to compile the LESS
       - Check for errors
