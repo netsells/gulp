@@ -208,5 +208,3 @@ module.exports = function(data) {
         return options;
     }
 }
-
-module.exports = gulp;
