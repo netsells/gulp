@@ -48,6 +48,7 @@
     "lodash": "^2.4.1",
     "tiny-lr": "*",
     "vinyl-paths": "^1.0.0",
-    "yargs": "^3.6.0"
+    "yargs": "^3.6.0",
+    "gulp-react": "^3.0.1"
   }
 }
