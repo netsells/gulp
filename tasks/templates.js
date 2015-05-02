@@ -13,7 +13,7 @@ module.exports = function(data) {
     var gulp    = data.gulp;
     var $       = data.$;
 
-    gulp.task('template', (data.task.before) ? data.task.before : [], function() {
+    gulp.task('templates', (data.task.before) ? data.task.before : [], function() {
         gulp.src(data.task.src)
             .pipe($.sort())
             .pipe($.plumber())
