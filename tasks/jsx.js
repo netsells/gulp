@@ -17,7 +17,7 @@ module.exports = function(data) {
         return gulp.src(data.task.src)
             .pipe($.plumber())
             .pipe($.react())
-            .pipe($.concat('app.js'))
+            .pipe($.concat('jsx.js'))
             .pipe(gulp.dest(data.task.dest));
     });
 }
