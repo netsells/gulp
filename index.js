@@ -11,7 +11,7 @@ module.exports = function(data) {
     component = data.component;
 
     _.forEach(c[component], function(n, key) {
-        require('./'+key)({
+        require('./tasks/'+key)({
             gulp:   gulp,
             $:      $,
             task:   c[component][key]
