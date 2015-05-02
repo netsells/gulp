@@ -30,12 +30,17 @@ module.exports = function(data) {
 
         _.forEach(c[component], function(n, key) {
 
+            watchSrc = c[component]['key'].watch;
+            if (watchSrc.src) {
+                watchSrc = watch.src;
+            }
+
             watchTask = key;
             if (c[component][key]['watch'] && c[component][key]['watch']['task']) {
                 watchTask = c[component][key]['watch']['task'];
             }
 
-            gulp.watch(c[component]['key'].watch, _.toArray(watchTask));
+            gulp.watch(watchSrc, _.toArray(watchTask));
         });
 
         if (c['global'].install) {
