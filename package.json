@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/netsells/gulp#readme",
   "dependencies": {
-    "gulp": "^3.8.8",
+    "gulp": "*",
     "gulp-paths": "netsells/gulp-paths",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-bless": "^3.0.1",
