@@ -18,6 +18,7 @@ module.exports = function(data) {
             .pipe($.plumber())
             .pipe($.react())
             .pipe($.concat('jsx.js'))
-            .pipe(gulp.dest(data.task.dest));
+            .pipe(gulp.dest(data.task.dest))
+            .pipe($.livereload());
     });
 }
