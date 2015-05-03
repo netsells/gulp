@@ -30,7 +30,7 @@ module.exports = function(data) {
             .pipe($.rename({
                 suffix: '.min'
             }))
-            .pipe($.uglify())
+            .pipe($.uglifyjs())
             .pipe(gulp.dest(data.task.dest))
             .pipe($.sourcemaps.write())
             .pipe($.livereload());

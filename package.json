@@ -42,7 +42,7 @@
     "gulp-rename": "*",
     "gulp-sort": "^1.0.1",
     "gulp-sourcemaps": "^1.5.1",
-    "gulp-uglify": "*",
+    "gulp-uglifyjs": "*",
     "gulp-util": "^3.0.1",
     "imagemin-pngquant": "^4.0.0",
     "lodash": "^2.4.1",
