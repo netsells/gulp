@@ -16,7 +16,9 @@ module.exports = function(data) {
     gulp.task('jsx', (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
             .pipe($.plumber())
-            .pipe($.react())
+            .pipe($.react({
+                harmony: true
+            }))
             .pipe($.concat('jsx.js'))
             .pipe(gulp.dest(data.task.dest))
             .pipe($.livereload());
