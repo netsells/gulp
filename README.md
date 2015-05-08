@@ -17,6 +17,10 @@ var netsellsGulp = require('netsells-gulp')({
 });
 ```
 
+You can specify the default component to compile, or you can specify the ``--c=<component>`` flag after the gulp command. This works for any specific gulp too, e.g. ``gulp less``, ``gulp watch``, etc.
+
+The ``gulp watch`` command also accepts a ``--build`` flag which will run the ``default`` task specified in your config.
+
 This module will handle the rest, as long as you provide a valid config for it to read.
 
 ## Config
