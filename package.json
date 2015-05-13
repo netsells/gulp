@@ -23,6 +23,7 @@
   "dependencies": {
     "gulp": "*",
     "gulp-paths": "netsells/gulp-paths",
+    "gulp-requiremodules": "netsells/gulp-requiremodules",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-bless": "^3.0.1",
     "gulp-codeception": "^0.5.0",

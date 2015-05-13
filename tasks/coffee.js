@@ -6,16 +6,14 @@ Run the task to compile the coffeescript
   - Move the file to our temporary storage
 */
 
-var gulp,
-    argv        = require('yargs').argv,
-    _           = require('lodash'),
-    pngquant    = require('imagemin-pngquant'),
-    vinylPaths  = require('vinyl-paths'),
-    path        = require('gulp-paths');
+var $ = require('gulp-require-modules')([
+    'gulp-plumber',
+    'gulp-concat',
+    'gulp-coffee'
+]);
 
 module.exports = function(data) {
     var gulp    = data.gulp;
-    var $       = data.$;
 
     gulp.task('coffee', (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)

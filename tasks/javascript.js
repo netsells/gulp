@@ -10,16 +10,17 @@ Run the task to compile the javascript
   - Reload if using a watch task
 */
 
-var gulp,
-    argv        = require('yargs').argv,
-    _           = require('lodash'),
-    pngquant    = require('imagemin-pngquant'),
-    vinylPaths  = require('vinyl-paths'),
-    path        = require('gulp-paths');
+var $ = require('gulp-require-modules')([
+    'gulp-sourcemaps',
+    'gulp-plumber',
+    'gulp-concat',
+    'gulp-rename',
+    'gulp-uglify',
+    'gulp-livereload'
+]);
 
 module.exports = function(data) {
     var gulp    = data.gulp;
-    var $       = data.$;
 
     gulp.task('javascript', (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)

@@ -4,12 +4,10 @@ Run the task to optimise images
   - Move to the public directory
 */
 
-var gulp,
-    argv        = require('yargs').argv,
-    _           = require('lodash'),
-    pngquant    = require('imagemin-pngquant'),
-    vinylPaths  = require('vinyl-paths'),
-    path        = require('gulp-paths');
+var $ = require('gulp-require-modules')([
+    'gulp-imagemin',
+    'imagemin-pngquant'
+]);
 
 module.exports = function(data) {
     var gulp    = data.gulp;
@@ -22,7 +20,7 @@ module.exports = function(data) {
                 svgoPlugins: [{
                     removeViewBox: false
                 }],
-                use: [pngquant()]
+                use: [imageminPngquant()]
             }))
             .pipe(gulp.dest(data.task.dest));
     });
