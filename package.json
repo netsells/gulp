@@ -35,7 +35,6 @@
     "gulp-jst-concat": "0.0.1",
     "gulp-less": "3.0.0",
     "gulp-livereload": "*",
-    "gulp-load-plugins": "^0.8.0",
     "gulp-minify-css": "*",
     "gulp-notify": "^2.0.1",
     "gulp-phpunit": "^0.7.0",
@@ -47,8 +46,6 @@
     "gulp-util": "^3.0.1",
     "imagemin-pngquant": "^4.0.0",
     "lodash": "^2.4.1",
-    "tiny-lr": "*",
-    "vinyl-paths": "^1.0.0",
     "yargs": "^3.6.0",
     "gulp-react": "^3.0.1"
   }
