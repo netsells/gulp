@@ -143,6 +143,9 @@ module.exports = {
 ### Functionality
 * Require dependencies on a per task basis, rather than all at once thought the ``$`` prefix
 * Prompt for component
+* Overridable tasks
+* Better error catching
+* Gutils functionality
 
 ### Tasks
 * PHPUnit
