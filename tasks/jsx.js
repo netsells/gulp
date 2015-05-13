@@ -2,7 +2,7 @@
 Run the task to compile the jsx templates
 */
 
-var $ = require('gulp-require-modules')([
+var $ = require('gulp-requiremodules')([
     'gulp-plumber',
     'gulp-concat',
     'gulp-react',

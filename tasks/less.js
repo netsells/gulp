@@ -9,7 +9,7 @@ Run the task to compile the LESS
   - Reload if using a watch task
 */
 
-var $ = require('gulp-require-modules')([
+var $ = require('gulp-requiremodules')([
     'gulp-plumber',
     'gulp-less',
     'gulp-autoprefixer',

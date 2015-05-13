@@ -2,7 +2,7 @@
 Run the task to compile the underscore templates
 */
 
-var $ = require('gulp-require-modules')([
+var $ = require('gulp-requiremodules')([
     'gulp-sort',
     'gulp-plumber',
     'gulp-jst-concat',

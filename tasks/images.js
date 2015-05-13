@@ -4,7 +4,7 @@ Run the task to optimise images
   - Move to the public directory
 */
 
-var $ = require('gulp-require-modules')([
+var $ = require('gulp-requiremodules')([
     'gulp-imagemin',
     'imagemin-pngquant'
 ]);

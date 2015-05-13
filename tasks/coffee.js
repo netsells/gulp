@@ -6,7 +6,7 @@ Run the task to compile the coffeescript
   - Move the file to our temporary storage
 */
 
-var $ = require('gulp-require-modules')([
+var $ = require('gulp-requiremodules')([
     'gulp-plumber',
     'gulp-concat',
     'gulp-coffee'

@@ -10,7 +10,7 @@ Run the task to compile the javascript
   - Reload if using a watch task
 */
 
-var $ = require('gulp-require-modules')([
+var $ = require('gulp-requiremodules')([
     'gulp-sourcemaps',
     'gulp-plumber',
     'gulp-concat',

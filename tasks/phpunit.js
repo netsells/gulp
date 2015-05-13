@@ -1,4 +1,4 @@
-var $ = require('gulp-require-modules')([]);
+var $ = require('gulp-requiremodules')([]);
 
 module.exports = function(data) {
     var gulp    = data.gulp;
