@@ -20,7 +20,7 @@ module.exports = function(data) {
                 svgoPlugins: [{
                     removeViewBox: false
                 }],
-                use: [imageminPngquant()]
+                use: [$.imageminPngquant()]
             }))
             .pipe(gulp.dest(data.task.dest));
     });
