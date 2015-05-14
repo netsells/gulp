@@ -1,10 +1,5 @@
 var gulp        = require('gulp'),
-    argv        = require('yargs').argv,
-    $           = require('gulp-load-plugins')({ pattern: '*', replaceString: /\bgulp[\-.]/ }),
-    _           = require('lodash'),
-    pngquant    = require('imagemin-pngquant'),
-    vinylPaths  = require('vinyl-paths'),
-    path        = require('gulp-paths');
+    _           = require('lodash');
 
 module.exports = function(data) {
     c = data.config;
@@ -13,7 +8,6 @@ module.exports = function(data) {
     _.forEach(c[component], function(n, key) {
         require('./tasks/'+key)({
             gulp:   gulp,
-            $:      $,
             task:   c[component][key]
         });
     });
@@ -22,36 +16,13 @@ module.exports = function(data) {
     Watch for changes in files and
     refresh the browser
     */
-    gulp.task('watch', function(){
-        if (argv.build) {
-            gulp.run('default');
-        }
-        $.livereload.listen();
 
-        _.forEach(c[component], function(n, key) {
-            if (c[component][key]['watch']) {
-                watchSrc = c[component][key].watch;
-                if (watchSrc.src) {
-                    watchSrc = watchSrc.src;
-                }
-
-                watchTask = key;
-                if (c[component][key]['watch'] && c[component][key]['watch']['task']) {
-                    watchTask = c[component][key]['watch']['task'];
-                }
-
-                if (typeof watchTask != "object") {
-                    watchTask = watchTask.split(" ");
-                }
-
-                gulp.watch(watchSrc, watchTask);
-            }
-        });
-
-        if (c['global'].install) {
-            gulp.watch(c['global'].install.watch, ['install']);
-        }
+    require('./tasks/'+key)({
+        gulp:       gulp,
+        component:  component,
+        c:          c
     });
+    
 
     /**
     Pretty notifications
