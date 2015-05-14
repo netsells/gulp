@@ -11,7 +11,6 @@ var $ = require('gulp-requiremodules')([
 
 module.exports = function(data) {
     var gulp    = data.gulp;
-    var $       = data.$;
 
     gulp.task('images', (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
