@@ -17,7 +17,7 @@ module.exports = function(data) {
     refresh the browser
     */
 
-    require('./tasks/'+key)({
+    require('./tasks/watch')({
         gulp:       gulp,
         component:  component,
         c:          c
