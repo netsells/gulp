@@ -141,7 +141,7 @@ module.exports = {
 
 ## To-do
 ### Functionality
-* Require dependencies on a per task basis, rather than all at once thought the ``$`` prefix
+* ~~Require dependencies on a per task basis, rather than all at once through the ``$`` prefix~~
 * Prompt for component
 * Overridable tasks
 * Better error catching
