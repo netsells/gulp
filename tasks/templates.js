@@ -19,7 +19,6 @@ module.exports = function(data) {
             .pipe($.jstConcat('templates.js', {
                 renameKeys: ['^.*templates/(.*).html$', '$1']
             }))
-            .pipe(gulp.dest(data.task.dest))
-            .pipe($.livereload());
+            .pipe(gulp.dest(data.task.dest));
     })
 }
