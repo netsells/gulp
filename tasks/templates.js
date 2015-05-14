@@ -5,8 +5,7 @@ Run the task to compile the underscore templates
 var $ = require('gulp-requiremodules')([
     'gulp-sort',
     'gulp-plumber',
-    'gulp-jst-concat',
-    'gulp-livereload'
+    'gulp-jst-concat'
 ]);
 
 module.exports = function(data) {
