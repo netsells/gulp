@@ -1,5 +1,5 @@
 # Gulp
-Netsells custom gulp file. This module is intended to speed up development by tasks consistent, as well as providing documentation and source control as improvements are made. 
+Netsells custom gulp file. This module is intended to speed up development by making tasks consistent, as well as providing documentation and source control as improvements are made. 
 
 More tasks will be added eventually, as well as improvements in performance.
 
@@ -141,7 +141,7 @@ module.exports = {
 
 ## To-do
 ### Functionality
-* Require dependencies on a per task basis, rather than all at once thought the ``$`` prefix
+* ~~Require dependencies on a per task basis, rather than all at once through the ``$`` prefix~~
 * Prompt for component
 * Overridable tasks
 * Better error catching
