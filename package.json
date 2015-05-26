@@ -22,8 +22,6 @@
   "homepage": "https://github.com/netsells/gulp#readme",
   "dependencies": {
     "gulp": "*",
-    "gulp-paths": "netsells/gulp-paths",
-    "gulp-requiremodules": "netsells/gulp-requiremodules",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-bless": "^3.0.1",
     "gulp-codeception": "^0.5.0",
@@ -37,16 +35,19 @@
     "gulp-livereload": "*",
     "gulp-minify-css": "*",
     "gulp-notify": "^2.0.1",
+    "gulp-paths": "netsells/gulp-paths",
     "gulp-phpunit": "^0.7.0",
     "gulp-plumber": "^0.6.6",
+    "gulp-react": "^3.0.1",
     "gulp-rename": "*",
+    "gulp-requiremodules": "netsells/gulp-requiremodules",
+    "gulp-sass": "^2.0.1",
     "gulp-sort": "^1.0.1",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "gulp-util": "^3.0.1",
     "imagemin-pngquant": "^4.0.0",
     "lodash": "^2.4.1",
-    "yargs": "^3.6.0",
-    "gulp-react": "^3.0.1"
+    "yargs": "^3.6.0"
   }
 }
