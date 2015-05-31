@@ -153,6 +153,8 @@ module.exports = {
 * Overridable tasks
 * Better error catching
 * Gutils functionality
+* Cleanup of compiled assets before running
+* vendor tasks
 
 ### Tasks
 * PHPUnit
