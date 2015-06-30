@@ -35,7 +35,9 @@ module.exports = function(data) {
             }))
             .pipe($.minifyCss())
             .pipe(gulp.dest(data.task.dest))
-            .pipe($.bless())
+            .pipe($.bless({
+                imports: false
+            }))
             .pipe(gulp.dest(data.task.dest))
             .pipe($.livereload());
     });
