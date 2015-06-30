@@ -135,6 +135,13 @@ module.exports = {
 	* Minified
 	* Moved to thje public folder
 	* Split up into multiple files if IE selector limit is reached
+* SASS
+	* Compiles to CSS
+	* Auto-prefixes any vendor specific attributes
+	* Moved to the public folder
+	* Minified
+	* Moved to thje public folder
+	* Split up into multiple files if IE selector limit is reached
 * Images
 	* Images are compressed
 	* Moved to the public folder
@@ -146,8 +153,10 @@ module.exports = {
 * Overridable tasks
 * Better error catching
 * Gutils functionality
+* Cleanup of compiled assets before running
+* vendor tasks
 
 ### Tasks
 * PHPUnit
 * Codecept
-* SASS/SCSS 
+* ~~SASS/SCSS~~
