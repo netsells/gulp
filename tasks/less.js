@@ -22,7 +22,7 @@ var $ = require('gulp-requiremodules')([
 module.exports = function(data) {
     var gulp    = data.gulp;
 
-    gulp.task('less', (data.task.before) ? data.task.before : [], function() {
+    gulp.task(data.taskName, (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
             .pipe($.plumber())
             .pipe($.less())
