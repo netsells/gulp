@@ -26,7 +26,7 @@ module.exports = function(data) {
         return gulp.src(data.task.src)
             .pipe($.sourcemaps.init())
             .pipe($.plumber())
-            .pipe($.concat('app.js'))
+            .pipe($.concat(data.fileName+'.js'))
             .pipe(gulp.dest(data.task.dest))
             .pipe($.rename({
                 suffix: '.min'

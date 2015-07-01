@@ -18,7 +18,7 @@ module.exports = function(data) {
             .pipe($.react({
                 harmony: true
             }))
-            .pipe($.concat('jsx.js'))
+            .pipe($.concat(data.fileName+'.js'))
             .pipe(gulp.dest(data.task.dest))
             .pipe($.livereload());
     });

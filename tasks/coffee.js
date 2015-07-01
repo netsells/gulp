@@ -18,7 +18,7 @@ module.exports = function(data) {
     gulp.task(data.taskName, (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
             .pipe($.plumber())
-            .pipe($.concat('app.js'))
+            .pipe($.concat(data.fileName+'.js'))
             .pipe($.coffee())
             .pipe(gulp.dest(data.task.dest));
     });
