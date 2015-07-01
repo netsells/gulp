@@ -35,9 +35,5 @@ module.exports = function(data) {
                 gulp.watch(watchSrc, watchTask);
             }
         });
-
-        if (c['global'].install) {
-            gulp.watch(c['global'].install.watch, ['install']);
-        }
     });
 }
