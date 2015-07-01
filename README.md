@@ -39,7 +39,7 @@ module.exports = {
                 task: 'Task to execute when changes are made'
             },
             src: [
-            'Array of files to pass into the pipe'
+            	'Array of files to pass into the pipe'
             ],
             dest: 'Path to move files to'
         }
@@ -112,6 +112,8 @@ module.exports = {
 
 
 ## Tasks
+* Install
+	* Bower install and npm install
 * CoffeeScript
 	* Concats all coffeescript files into a single file
 	* Compiles to Javascript
@@ -133,7 +135,7 @@ module.exports = {
 	* Auto-prefixes any vendor specific attributes
 	* Moved to the public folder
 	* Minified
-	* Moved to thje public folder
+	* Moved to the public folder
 	* Split up into multiple files if IE selector limit is reached
 * SASS
 	* Compiles to CSS
@@ -146,6 +148,9 @@ module.exports = {
 	* Images are compressed
 	* Moved to the public folder
 
+## Vendor tasks
+Need to compile certain files but don't want these compiled into a single bloated file with your app logic especially if they're not going to change often (mainly package manager dependencies such as bower)? Well no problem! Simply name the task in the following format: ```vendor:javascript``` for example, and a separate file will be compiled named ```vendor.javascript.js``` on compile. This also speeds up compiling on save immensely - [Craig](http://craigy.co.uk/) will be happy!
+
 ## To-do
 ### Functionality
 * ~~Require dependencies on a per task basis, rather than all at once through the ``$`` prefix~~
@@ -154,7 +159,7 @@ module.exports = {
 * Better error catching
 * Gutils functionality
 * Cleanup of compiled assets before running
-* vendor tasks
+* ~~Vendor tasks~~
 
 ### Tasks
 * PHPUnit
