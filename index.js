@@ -6,9 +6,20 @@ module.exports = function(data) {
     component = data.component;
 
     _.forEach(c[component], function(n, key) {
-        require('./tasks/'+key)({
-            gulp:   gulp,
-            task:   c[component][key]
+        // Get the task
+        task = key;
+        // Is it a subtask?
+        isSub = (task.split(':').length == 2);
+        // Get the main task
+        if (isSub) {
+            task = task.split(':')[1]
+        }
+        // Pull in the task module
+        require('./tasks/'+task)({
+            gulp:     gulp,
+            task:     c[component][key],
+            taskName: key,
+            fileName: (isSub) ? 'vendor.' + task : 'app'
         });
     });
 
@@ -22,7 +33,6 @@ module.exports = function(data) {
         component:  component,
         c:          c
     });
-    
 
     /**
     Pretty notifications
