@@ -12,14 +12,15 @@ module.exports = function(data) {
         isSub = (task.split(':').length == 2);
         // Get the main task
         if (isSub) {
-            task = task.split(':')[1]
+            subTask = task.split(':')[0];
+            task = task.split(':')[1];
         }
         // Pull in the task module
-        require('./tasks/'+task)({
+        require('./tasks/' + task)({
             gulp:     gulp,
             task:     c[component][key],
             taskName: key,
-            fileName: (isSub) ? 'vendor.' + task : 'app'
+            fileName: (isSub) ? subTask + '.' + task : 'app'
         });
     });
 

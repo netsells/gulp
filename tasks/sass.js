@@ -13,6 +13,7 @@ var $ = require('gulp-requiremodules')([
     'gulp-plumber',
     'gulp-sass',
     'gulp-autoprefixer',
+    'gulp-concat',
     'gulp-rename',
     'gulp-minify-css',
     'gulp-bless',
@@ -26,6 +27,7 @@ module.exports = function(data) {
         return gulp.src(data.task.src)
             .pipe($.plumber())
             .pipe($.sass())
+            .pipe($.concat(data.fileName + '.css'))
             .pipe($.autoprefixer({
                 remove: false
             }))
