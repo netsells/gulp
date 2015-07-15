@@ -31,13 +31,12 @@ module.exports = function(data) {
             .pipe($.autoprefixer({
                 remove: false
             }))
+            .pipe($.bless())
             .pipe(gulp.dest(data.task.dest))
+            .pipe($.minifyCss())
             .pipe($.rename({
                 suffix: '.min'
             }))
-            .pipe($.minifyCss())
-            .pipe(gulp.dest(data.task.dest))
-            .pipe($.bless())
             .pipe(gulp.dest(data.task.dest))
             .pipe($.livereload());
     });
