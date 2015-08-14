@@ -24,7 +24,6 @@ module.exports = function(data) {
             .pipe(gulp.dest(data.task.dest))
             .on('end', function() {
                 return gulp.run((data.task.after) ? data.task.after : []);
-            })
-            .pipe($.livereload());
+            });
     });
 }
