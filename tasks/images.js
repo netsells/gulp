@@ -21,6 +21,10 @@ module.exports = function(data) {
                 }],
                 use: [$.imageminPngquant()]
             }))
-            .pipe(gulp.dest(data.task.dest));
+            .pipe(gulp.dest(data.task.dest))
+            .on('end', function() {
+                return gulp.run((data.task.after) ? data.task.after : []);
+            })
+            .pipe($.livereload());
     });
 }

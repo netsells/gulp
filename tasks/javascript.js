@@ -34,6 +34,9 @@ module.exports = function(data) {
             .pipe($.uglify())
             .pipe(gulp.dest(data.task.dest))
             .pipe($.sourcemaps.write())
+            .on('end', function() {
+                return gulp.run((data.task.after) ? data.task.after : []);
+            })
             .pipe($.livereload());
     })
 }
