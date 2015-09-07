@@ -15,7 +15,7 @@ function testNotification(status, pluginName, override) {
         message: ( status == 'pass' ) ? '\n\nAll tests have passed!\n\n' : '\n\nOne or more tests failed...\n\n',
         icon:    __dirname + '/node_modules/gulp-' + pluginName +'/assets/test-' + status + '.png'
     };
-    options = lodash.merge(options, override);
+    options = $.lodash.merge(options, override);
     return options;
 }
 
