@@ -10,10 +10,10 @@ More tasks will be added eventually, as well as improvements in performance.
 The gulpfile itself needs only be the following:
 
 ```javascript
-var gulp        = require('gulp');
+var gulp = require('gulp');
 
-var netsellsGulp = require('netsells-gulp')({
-    config:     require('./gulp.config')
+gulp.tasks = require('netsells-gulp')({
+    config: require('./gulp.config')
 });
 ```
 
