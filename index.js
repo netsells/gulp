@@ -1,9 +1,10 @@
-var gulp        = require('gulp'),
-    _           = require('lodash');
+var gulp = require('gulp'),
+    _    = require('lodash'),
+    argv = require('yargs').argv;
 
 module.exports = function(data) {
     c = data.config;
-    component = data.component;
+    component = data.component || (!argv.c) ? 'app' : argv.c;
 
     _.forEach(c[component], function(n, key) {
         // Get the task
@@ -47,4 +48,6 @@ module.exports = function(data) {
         options = _.merge(options, override);
         return options;
     }
+
+    return gulp.tasks;
 }
