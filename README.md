@@ -1,6 +1,8 @@
 # Gulp
 Netsells custom gulp file. This module is intended to speed up development by making tasks consistent, as well as providing documentation and source control as improvements are made. 
 
+If working on multiple projects using the this gulpfile, I would recommend installing this module globally (```npm install -g netsells-gulp```) so that you don't need to install all the dependencies in each project.
+
 More tasks will be added eventually, as well as improvements in performance.
 
 ## Setup
@@ -8,12 +10,10 @@ More tasks will be added eventually, as well as improvements in performance.
 The gulpfile itself needs only be the following:
 
 ```javascript
-var gulp        = require('gulp'),
-    argv        = require('yargs').argv;
+var gulp        = require('gulp');
 
 var netsellsGulp = require('netsells-gulp')({
-    config:     require('./gulp.config'),
-    component:  (!argv.c) ? 'app' : argv.c
+    config:     require('./gulp.config')
 });
 ```
 
