@@ -4,7 +4,9 @@ var gulp = require('gulp'),
 
 module.exports = function(data) {
     c = data.config;
-    component = data.component || (!argv.c) ? 'app' : argv.c;
+
+    // TY, @swlcx. @_Craigy was no help in the matter.
+    component = data.component || ((!argv.c) ? 'app' : argv.c)
 
     _.forEach(c[component], function(n, key) {
         // Get the task
