@@ -24,16 +24,12 @@ module.exports = function(data) {
 
     gulp.task(data.taskName, (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
-            .pipe($.sourcemaps.init())
+            .pipe($.sourcemaps.init({ loadMaps: true }))
             .pipe($.plumber())
-            .pipe($.concat(data.fileName+'.js'))
-            .pipe(gulp.dest(data.task.dest))
-            .pipe($.rename({
-                suffix: '.min'
-            }))
+            .pipe($.concat(data.fileName+'.min.js'))
             .pipe($.uglify())
+            .pipe($.sourcemaps.write('maps'))
             .pipe(gulp.dest(data.task.dest))
-            .pipe($.sourcemaps.write())
             .on('end', function() {
                 return gulp.run((data.task.after) ? data.task.after : []);
             })

@@ -7,6 +7,7 @@ Run the task to compile the coffeescript
 */
 
 var $ = require('gulp-requiremodules')([
+    'gulp-sourcemaps',
     'gulp-plumber',
     'gulp-concat',
     'gulp-coffee'
@@ -17,9 +18,11 @@ module.exports = function(data) {
 
     gulp.task(data.taskName, (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
+            .pipe($.sourcemaps.init({ loadMaps: true }))
             .pipe($.plumber())
             .pipe($.concat(data.fileName+'.js'))
             .pipe($.coffee())
+            .pipe($.sourcemaps.write())
             .pipe(gulp.dest(data.task.dest));
     });
 }

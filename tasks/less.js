@@ -10,6 +10,7 @@ Run the task to compile the LESS
 */
 
 var $ = require('gulp-requiremodules')([
+    'gulp-sourcemaps',
     'gulp-plumber',
     'gulp-less',
     'gulp-autoprefixer',
@@ -24,6 +25,7 @@ module.exports = function(data) {
 
     gulp.task(data.taskName, (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
+            .pipe($.sourcemaps.init())
             .pipe($.plumber())
             .pipe($.less())
             .pipe($.autoprefixer({
@@ -32,11 +34,11 @@ module.exports = function(data) {
             .pipe($.bless({
                 imports: false
             }))
-            .pipe(gulp.dest(data.task.dest))
             .pipe($.minifyCss())
             .pipe($.rename({
                 suffix: '.min'
             }))
+            .pipe($.sourcemaps.write('maps'))
             .pipe(gulp.dest(data.task.dest))
             .on('end', function() {
                 return gulp.run((data.task.after) ? data.task.after : []);
