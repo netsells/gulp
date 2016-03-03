@@ -26,7 +26,12 @@ module.exports = function(data) {
     gulp.task(data.taskName, (data.task.before) ? data.task.before : [], function() {
         return gulp.src(data.task.src)
             .pipe($.sourcemaps.init())
-            .pipe($.plumber())
+            .pipe($.plumber({
+                errorHandler: function(err) {
+                    console.log(err.toString());
+                    this.emit('end');
+                }
+            }))
             .pipe($.less())
             .pipe($.autoprefixer({
                 remove: false
