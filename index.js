@@ -18,12 +18,15 @@ module.exports = function(data) {
             subTask = task.split(':')[0];
             task = task.split(':')[1];
         }
+        if (!(fileName = c[component][key].filename)) {
+            fileName = (isSub) ? subTask + '.' + task : 'app';
+        }
         // Pull in the task module
         require('./tasks/' + task)({
             gulp:     gulp,
             task:     c[component][key],
             taskName: key,
-            fileName: (isSub) ? subTask + '.' + task : 'app'
+            fileName: fileName
         });
     });
 

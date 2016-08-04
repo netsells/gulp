@@ -34,13 +34,14 @@ module.exports = function(data) {
             .pipe($.autoprefixer({
                 remove: false
             }))
+            .pipe($.rename({
+                basename: data.fileName,
+                suffix: '.min'
+            }))
             .pipe($.bless({
                 imports: false
             }))
             .pipe($.minifyCss())
-            .pipe($.rename({
-                suffix: '.min'
-            }))
             .pipe(gulp.dest(data.task.dest))
             .on('end', function() {
                 return gulp.run((data.task.after) ? data.task.after : []);
