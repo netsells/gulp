@@ -1,6 +1,6 @@
 {
   "name": "netsells-gulp",
-  "version": "1.0.0",
+  "version": "0.9.2",
   "description": "Netsells custom gulp file",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,33 @@
   },
   "homepage": "https://github.com/netsells/gulp#readme",
   "dependencies": {
-    "gutils": "0.0.5",
-    "laravel-elixir": "^4.0.0"
+    "gulp": "*",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-bless": "^3.0.1",
+    "gulp-codeception": "^0.5.0",
+    "gulp-coffee": "^2.2.0",
+    "gulp-concat": "^2.4.3",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-install": "^0.2.0",
+    "gulp-jst": "^0.1.1",
+    "gulp-jst-concat": "0.0.1",
+    "gulp-less": "3.0.0",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "^2.0.1",
+    "gulp-paths": "*",
+    "gulp-phpunit": "^0.7.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-react": "^3.0.1",
+    "gulp-rename": "*",
+    "gulp-requiremodules": "*",
+    "gulp-sass": "^2.0.1",
+    "gulp-sort": "^1.0.1",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "^3.0.1",
+    "imagemin-pngquant": "^4.0.0",
+    "lodash": "^2.4.1",
+    "yargs": "^3.6.0"
   }
 }
