@@ -1,6 +1,6 @@
 {
   "name": "netsells-gulp",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Netsells custom gulp file",
   "main": "index.js",
   "scripts": {
