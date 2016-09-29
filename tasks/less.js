@@ -41,7 +41,7 @@ module.exports = function(data) {
             .pipe($.bless({
                 imports: false
             }))
-            .pipe($.minifyCss())
+            .pipe($.minifyCss({processImport: false}))
             .pipe(gulp.dest(data.task.dest))
             .on('end', function() {
                 return gulp.run((data.task.after) ? data.task.after : []);
